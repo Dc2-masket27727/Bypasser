@@ -1,0 +1,48 @@
+--by @masket_smile6013 In YouTube!
+
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+
+local PhantomForcesWindow = Library:NewWindow("Chat Bypasser")
+
+game.StarterGui:SetCore("SendNotification", {
+Title = "Warning", --Warnings
+    Text = "this Script is 65% Completed",
+    Duration = 12
+})
+wait(2)
+game.StarterGui:SetCore("SendNotification", {
+Title = "Warning", --Warnings
+    Text = "You can get banned from roblox for using this Script (only for the bypassed chat!!",
+    Duration = 10
+})
+local KillingCheats = PhantomForcesWindow:NewSection("Main")
+
+KillingCheats:CreateTextbox("Message to bypass", function(text) --Message to send "Bypass Message"
+       getgenv().Text = text
+end)
+
+KillingCheats:CreateButton("Bypass Message", function(value) --Button of bypáss
+local args = {
+    [1] = Text.." '", --Text to send and bypass
+    [2] = "All" --Message for "Name" or "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+end)
+--Note: work in some games!.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
